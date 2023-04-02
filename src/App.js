@@ -20,26 +20,27 @@ class ipLocation extends Component {
   render() {
     const { loading, msg } = this.state
 
-    if(msg){
+    // if(msg){
       return (
         <center>
           <p>
             <button onClick={this.handleClick("findLocation")}>{loading ? "Loading..." : "Click me"}</button>
             <br />
-          </p>
-        </center>
-      )
-    }
-    else {
-      return (
-        <center>
-          <p>
-            Ha Ha your location and all personal information got revealed!, Happy april Fool! <br/><br/>
             <span>{msg}</span>
           </p>
         </center>
       )
-    }
+  //   }
+  //   else {
+  //     return (
+  //       <center>
+  //         <p>
+  //           Ha Ha your location and all personal information got revealed!, Happy april Fool! <br/><br/>
+  //           <span>{msg}</span>
+  //         </p>
+  //       </center>
+  //     )
+  //   }
   }
 }
 

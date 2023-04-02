@@ -24,7 +24,7 @@ class ipLocation extends Component {
       return (
         <center>
           <p>
-            <button onClick={this.handleClick("findLocation")}>{loading ? "Loading..." : "Click me"}</button>
+            <button onClick={this.handleClick("async-dadjoke")}>{loading ? "Loading..." : "Click me"}</button>
             <br />
             <span>{msg}</span>
           </p>

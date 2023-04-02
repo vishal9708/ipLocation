@@ -20,7 +20,7 @@ class ipLocation extends Component {
   render() {
     const { loading, msg } = this.state
 
-    if(msg.status !== "success"){
+    if(msg){
       return (
         <center>
           <p>

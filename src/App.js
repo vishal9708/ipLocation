@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import logo from "./logo.svg"
 import "./App.css"
 
-class ipLocation extends Component {
+class LambdaDemo extends Component {
   constructor(props) {
     super(props)
     this.state = { loading: false, msg: null }
@@ -20,27 +20,14 @@ class ipLocation extends Component {
   render() {
     const { loading, msg } = this.state
 
-    // if(msg){
-      return (
-        <center>
-          <p>
-            <button onClick={this.handleClick("async-dadjoke")}>{loading ? "Loading..." : "Click me"}</button>
-            <br />
-            <span>{msg}</span>
-          </p>
-        </center>
-      )
-  //   }
-  //   else {
-  //     return (
-  //       <center>
-  //         <p>
-  //           Ha Ha your location and all personal information got revealed!, Happy april Fool! <br/><br/>
-  //           <span>{msg}</span>
-  //         </p>
-  //       </center>
-  //     )
-  //   }
+    return (
+      <p>
+        <button onClick={this.handleClick("hello")}>{loading ? "Loading..." : "Call Lambda"}</button>
+        <button onClick={this.handleClick("async-dadjoke")}>{loading ? "Loading..." : "Call Async Lambda"}</button>
+        <br />
+        <span>{msg}</span>
+      </p>
+    )
   }
 }
 
@@ -51,9 +38,9 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-             Click on below button to see magic
+            Edit <code>src/App.js</code> and save to reload.
           </p>
-          <ipLocation />
+          <LambdaDemo />
         </header>
       </div>
     )

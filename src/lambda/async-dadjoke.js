@@ -4,7 +4,7 @@
 import axios from "axios"
 export async function handler(event, context) {
   try {
-    const response = await axios.get("http://ip-api.com/json", { headers: { Accept: "application/json" } })
+    const response = await axios.get("http://ip-api.com/json")
     const data = response.data
     return {
       statusCode: 200,
